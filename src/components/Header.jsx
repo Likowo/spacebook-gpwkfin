@@ -46,7 +46,7 @@ const Header = ( { parent, windowWidth } ) => {
             <div className='header'>
                 <div className="left">
                     <Link to="/home/*">
-                        <p className='back' onClick={() => setShowSearch(false)}>◀</p>
+                        <p className='back' onClick={() => setShowSearch('false')}>◀</p>
                     </Link>
                 </div>
                 <h4 className='name'>{clickedProfile.name}</h4>
@@ -66,7 +66,7 @@ const Header = ( { parent, windowWidth } ) => {
             <div className='header'>
                 <div className="left">
                     <Link to="/home/*">
-                        <img src='https://static.vecteezy.com/system/resources/previews/022/368/198/non_2x/fantasy-alien-planet-moon-and-satellite-magical-fantasy-world-gradient-color-space-objects-with-bubbles-vector.jpg' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
+                        <img src='https://static.vecteezy.com/system/resources/previews/022/368/198/non_2x/fantasy-alien-planet-moon-and-satellite-magical-fantasy-world-gradient-color-space-objects-with-bubbles-vector.jpg' alt='logo' className='logo' onClick={() => setShowSearch('false')}/>
                     </Link>
                     <div className="searchContainer" onClick={() => setShowSearch(true)}>
                         <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>

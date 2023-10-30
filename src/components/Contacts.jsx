@@ -22,8 +22,8 @@ const Contacts = () => {
             <div
               className="innerUniverse"
               style={{ backgroundImage: `url(${url})` }}
-              key={index.id}
-            >
+              key={ele.id} /**changed key prop unique identifier from {index} object to ele object {ele.id} to make sure every element produced by the map function has a unique identifier.*/
+            > 
               {/* <div className='userImage'> 
                     <img src={friends[index].image}/>
                 </div> */}
