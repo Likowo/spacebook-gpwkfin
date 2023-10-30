@@ -43,10 +43,10 @@ const Stories = ( {parent} ) => {
   {friends && friends.map((friend, index) => {
     if (friend && friend.image && friend.name && galacticHome && galacticHome[index] && galacticHome[index].url) {
       return (
-        <div className="story" style={{backgroundImage: `url(${galacticHome[index].url})`}} key={index.id}>
+        <div className="story" style={{backgroundImage: `url(${galacticHome[index].url})`}} key={friend.id}>
           <img src={friend.image} alt='profile pic' className='avatar'/>
           <p className="name">{friend.name}</p>
-        </div>
+        </div> /**changed key prop unique identifier from {index} object to friend object {friend.id} to make sure every element produced by the map function has a unique identifier.*/
       );
     } else {
       return null; // or handle the missing data appropriately
