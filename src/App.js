@@ -29,7 +29,7 @@ function App() {
           <Routes> 
             <Route path="*" element={<h1>you are lost</h1>} />
             <Route path="/" element={<Root />} />
-            <Route path="/home" element={<Mobile />}/>
+            <Route path="/home/*" element={<Mobile />}/>
             <Route path={`/profile/${clickedProfile.name?.replaceAll(' ', '')}`} element={<Profile profile={clickedProfile} parent="mobile"/>}/>
           </Routes>
         </>

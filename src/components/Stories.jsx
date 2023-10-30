@@ -38,7 +38,7 @@ const Stories = ( {parent} ) => {
   {friends && friends.map((friend, index) => {
     if (friend && friend.image && friend.name && galacticHome && galacticHome[index] && galacticHome[index].url) {
       return (
-        <div className="story" style={{backgroundImage: `url(${galacticHome[index].url})`}} key={index}>
+        <div className="story" style={{backgroundImage: `url(${galacticHome[index].url})`}} key={index.id}>
           <img src={friend.image} alt='profile pic' className='avatar'/>
           <p className='name'>{friend.name}</p>
         </div>
@@ -80,7 +80,7 @@ const Stories = ( {parent} ) => {
     // Check if friend is defined and contains the required properties
     if (friend && friend.image && friend.name) {
       return (
-        <div className="story" style={{backgroundImage: `url(${galacticHome[index]?.url})`}}>
+        <div className="story" style={{backgroundImage: `url(${galacticHome[index]?.url})`}} key={index.id}>
           <img src={friend.image} alt='profile pic' className='avatar'/>
           <p className='name'>{friend.name}</p>
         </div>
