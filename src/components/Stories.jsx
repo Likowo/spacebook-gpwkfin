@@ -23,7 +23,7 @@ const Stories = ( {parent} ) => {
             <div className={!underline && 'underline'} onClick={() => setUnderline(false)}>Reels</div>
           </div>
   
-          <div className="stories">
+          {/* <div className="stories">
             { friends.map((friend, index) => {
               return (
                 <div className="story" style={{backgroundImage: `url(${galacticHome[index]?.url})`}} key={index}>
@@ -32,7 +32,22 @@ const Stories = ( {parent} ) => {
                 </div>
               )
             }) }
-          </div>
+          </div> */}
+
+<div className="stories">
+  {friends && friends.map((friend, index) => {
+    if (friend && friend.image && friend.name && galacticHome && galacticHome[index] && galacticHome[index].url) {
+      return (
+        <div className="story" style={{backgroundImage: `url(${galacticHome[index].url})`}} key={index}>
+          <img src={friend.image} alt='profile pic' className='avatar'/>
+          <p className='name'>{friend.name}</p>
+        </div>
+      );
+    } else {
+      return null; // or handle the missing data appropriately
+    }
+  })}
+</div>
         
       </div>
     )
