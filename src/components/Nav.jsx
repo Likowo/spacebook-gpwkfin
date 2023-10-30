@@ -61,12 +61,12 @@ const Nav = () => {
          <span> Events </span> 
         </div>
     
-        <div className='profilePic'> 
+        <div className='adManager'> 
           <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/google-analytics-4083909-3408593.png" alt="" className='icon'/>
          <span> Ads manager </span> 
         </div>
     
-        <div className='profilePic'> 
+        <div className='seeMore'> 
           <img src="https://w1.pngwing.com/pngs/459/66/png-transparent-arrow-graphic-design-dropdown-list-button-blue-azure-line-electric-blue-symbol.png" alt="" className='icon'/>
          <span> See More </span> 
         </div>
