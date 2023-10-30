@@ -19,7 +19,7 @@ const Header = ( { parent, windowWidth } ) => {
           <div className='header'>
             <div className="left">
                 <img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png" alt="" className="menu" />
-                <Link to="/home">
+                <Link to="/home/*">
                     <img src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo-700x394.png" alt="" className="logo" />
                 </Link>
             </div>
@@ -45,7 +45,7 @@ const Header = ( { parent, windowWidth } ) => {
         return(
             <div className='header'>
                 <div className="left">
-                    <Link to="/home">
+                    <Link to="/home/*">
                         <p className='back' onClick={() => setShowSearch(false)}>◀</p>
                     </Link>
                 </div>
@@ -65,7 +65,7 @@ const Header = ( { parent, windowWidth } ) => {
         return(
             <div className='header'>
                 <div className="left">
-                    <Link to="/home">
+                    <Link to="/home/*">
                         <img src='https://static.vecteezy.com/system/resources/previews/022/368/198/non_2x/fantasy-alien-planet-moon-and-satellite-magical-fantasy-world-gradient-color-space-objects-with-bubbles-vector.jpg' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
                     </Link>
                     <div className="searchContainer" onClick={() => setShowSearch(true)}>
@@ -100,8 +100,8 @@ const Header = ( { parent, windowWidth } ) => {
         return(
             <div className='header'>
                 <div className="left">
-                    <Link to="/home">
-                        <img src='https://static.vecteezy.com/system/resources/previews/022/368/198/non_2x/fantasy-alien-planet-moon-and-satellite-magical-fantasy-world-gradient-color-space-objects-with-bubbles-vector.jpg' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
+                    <Link to="/home/*">
+                        <img src='https://static.vecteezy.com/system/resources/previews/022/368/198/non_2x/fantasy-alien-planet-moon-and-satellite-magical-fantasy-world-gradient-color-space-objects-with-bubbles-vector.jpg' alt='logo' className='logo' onClick={() => setShowSearch('false')}/>
                     </Link>
                     <div className="searchContainer" onClick={() => setShowSearch(true)}>
                         <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>

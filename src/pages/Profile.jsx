@@ -34,11 +34,11 @@ const Profile = ( { parent, profile} ) => {
                     <hr />
                     <div className="bottom">
                         <div className="post">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcset="" className='icon'/>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcSet="" className='icon'/>
                             <p>Write Post</p>
                         </div>
                         <div className="">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcset="" className='icon'/>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcSet="" className='icon'/>
                             <p>Share Photo</p>
                         </div>
                     </div>
@@ -59,16 +59,15 @@ const Profile = ( { parent, profile} ) => {
     }
     const tablet = () => {
         return (
-            <>
-            <Header parent="tablet"/>
-            { showSearch && <Search />}
             <div className='tabletProfileContainer'>
                 {/* <h1>{parent}</h1>
                 <h1>TABLET PROFILE</h1>
                 <p>{profile.name} profile</p>
                 <img src={profile.image}/> */}
-                <Banner />
-                <ProfileHead />
+                 <Header parent="tablet"/>
+                 { showSearch && <Search />}
+                 <Banner />
+                 <ProfileHead />
                 <div className="profileBody">
                     <div className="leftSide">
                         <Intro />
@@ -80,22 +79,20 @@ const Profile = ( { parent, profile} ) => {
                         <Feed />
                     </div>
                 </div>
-            </div>
-            </>
+            </div>       
         )
     }
     const desktop = () => {
         return (
-            <>
-                <Header parent="desktop"/>
-                <div className='desktopProfileContainer'>
-                { showSearch && <Search />}
+            <div className='desktopProfileContainer'>
                 {/* <h1>{parent}</h1> */}
                 {/* <h1>DESKTOP PROFILE</h1> */}
                 {/* <p>{profile.name} profile</p>
                 <img src={profile.image}/> */}
-                <Banner />
-                <ProfileHead />
+                    <Header parent="desktop"/>
+                    { showSearch && <Search />}
+                    <Banner />
+                    <ProfileHead />
                 <div className="profileBody">
                     <div className="leftSide">
                         <Intro />
@@ -107,14 +104,14 @@ const Profile = ( { parent, profile} ) => {
                         <Feed />
                     </div>
                 </div>
-                </div>
-            </>
+            </div>          
         )
     }
   
     if( parent === "mobile" ) return mobile()
     if( parent === "tablet" ) return tablet()
-    if( !parent ) return desktop() // dont know why parent is undefined...
+    if( parent === "desktop" ) return desktop()
+    // if( !parent ) return desktop() // dont know why parent is undefined...
 }
 
 export default Profile
