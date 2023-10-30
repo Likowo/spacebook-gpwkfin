@@ -18,10 +18,15 @@ const Stories = ( {parent} ) => {
     return (
       <div className='storiesContainer'>
   
-          <div className="options">
+          {/* <div className="options">
             <div className={underline && 'underline'} onClick={() => setUnderline(true)}>Stories</div>
-            <div className={!underline && 'underline'} onClick={() => setUnderline('false')}>Reels</div>
-          </div>
+            <div className={!underline && 'underline'} onClick={() => setUnderline(false)}>Reels</div>
+          </div> */}
+ <div className="options">
+    <div className={underline ? 'underline' : ''} onClick={() => setUnderline(true)}>Stories</div>
+    <div className={!underline ? 'underline' : ''} onClick={() => setUnderline(false)}>Reels</div>
+  </div>
+
   
           {/* <div className="stories">
             { friends.map((friend, index) => {
@@ -47,8 +52,7 @@ const Stories = ( {parent} ) => {
       return null; // or handle the missing data appropriately
     }
   })}
-</div>
-        
+</div>       
       </div>
     )
   }

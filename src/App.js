@@ -59,7 +59,7 @@ function App() {
             <Route path="*" element={<h1>You are lost</h1>} />
             <Route path="/" element={<Root />} />
             <Route path="/home/*" element={<Desktop />}/>
-            <Route path={`/profile/${clickedProfile.name?.replaceAll(' ', '')}`} element={<Profile profile={clickedProfile}/>} parent="desktop"/>
+            <Route path={`/profile/${clickedProfile.name?.replaceAll(' ', '')}`} element={<Profile profile={clickedProfile} parent="desktop"/>}/>
           </Routes>
         </>
       )
