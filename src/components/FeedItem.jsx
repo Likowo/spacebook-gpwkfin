@@ -37,7 +37,7 @@ const FeedItem = ( {friend, index, parent} ) => {
       <div className="top">
       <Link to={`/profile/${friend?.name.replaceAll(' ','')}`}>
         <div className="left" onClick={() => setClickedProfile(friend)}>
-            <img src={friend?.image} alt="" srcset="" />
+            <img src={friend?.image} alt="" srcSet="" />
             <div className="">
                 <h4>{friend?.name}</h4>
                 <p className='globe'>{time}h 🌍</p>
@@ -83,7 +83,7 @@ const FeedItem = ( {friend, index, parent} ) => {
             {/* <p className='viewMore'>View more comments</p> */}
 
             <div className="commentContainer">
-                <img src={friend?.image} alt="" srcset="" />
+                <img src={friend?.image} alt="" srcSet="" />
                 <div className="comment">
                     <p className="name">{friend?.name}</p>
                     <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -92,7 +92,7 @@ const FeedItem = ( {friend, index, parent} ) => {
         </div>
 
         <div className="addComment">
-            <img src={mainProfile?.image} alt="" srcset="" />
+            <img src={mainProfile?.image} alt="" srcSet="" />
             <input type="text" placeholder='Write a comment...' className={`input${index}`}/>
         </div>
 
@@ -107,7 +107,7 @@ const FeedItem = ( {friend, index, parent} ) => {
           <div className="top">
           <Link to={`/profile/${friend?.name.replaceAll(' ','')}`}>
             <div className="left" onClick={() => setClickedProfile(friend)}>
-                <img src={friend?.image} alt="" srcset="" />
+                <img src={friend?.image} alt="" srcSet="" />
                 <div className="">
                     <h4>{friend?.name}</h4>
                     <p className='globe'>{time}h 🌍</p>
@@ -154,7 +154,7 @@ const FeedItem = ( {friend, index, parent} ) => {
                 {/* <p className='viewMore'>View more comments</p> */}
     
                 <div className="commentContainer">
-                    <img src={friend?.image} alt="" srcset="" />
+                    <img src={friend?.image} alt="" srcSet="" />
                     <div className="comment">
                         <p className="name">{friend?.name}</p>
                         <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -163,7 +163,7 @@ const FeedItem = ( {friend, index, parent} ) => {
             </div>
     
             <div className="addComment">
-                <img src={mainProfile?.image} alt="" srcset="" />
+                <img src={mainProfile?.image} alt="" srcSet="" />
                 <input type="text" placeholder='Write a comment...' className={`input${index}`}/>
             </div>
     

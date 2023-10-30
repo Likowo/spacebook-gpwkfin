@@ -20,7 +20,7 @@ const Stories = ( {parent} ) => {
   
           <div className="options">
             <div className={underline && 'underline'} onClick={() => setUnderline(true)}>Stories</div>
-            <div className={!underline && 'underline'} onClick={() => setUnderline(false)}>Reels</div>
+            <div className={!underline && 'underline'} onClick={() => setUnderline('false')}>Reels</div>
           </div>
   
           {/* <div className="stories">
@@ -40,7 +40,7 @@ const Stories = ( {parent} ) => {
       return (
         <div className="story" style={{backgroundImage: `url(${galacticHome[index].url})`}} key={index.id}>
           <img src={friend.image} alt='profile pic' className='avatar'/>
-          <p className='name'>{friend.name}</p>
+          <p className="name">{friend.name}</p>
         </div>
       );
     } else {
