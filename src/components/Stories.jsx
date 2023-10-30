@@ -49,7 +49,7 @@ const Stories = ( {parent} ) => {
   
           <hr/>
   
-          <div className="stories">
+          {/* <div className="stories">
             { friends.map((friend, index) => {
               return (
                 <div className="story" style={{backgroundImage: `url(${galacticHome[index]?.url})`}}>
@@ -58,8 +58,23 @@ const Stories = ( {parent} ) => {
                 </div>
               )
             }) }
-          </div>
+          </div> */}
         
+        <div className="stories">
+  {friends && friends.map((friend, index) => {
+    // Check if friend is defined and contains the required properties
+    if (friend && friend.image && friend.name) {
+      return (
+        <div className="story" style={{backgroundImage: `url(${galacticHome[index]?.url})`}}>
+          <img src={friend.image} alt='profile pic' className='avatar'/>
+          <p className='name'>{friend.name}</p>
+        </div>
+      );
+    } else {
+      return null; // Or handle the missing data appropriately
+    }
+  })}
+</div>
       </div>
     )
   }

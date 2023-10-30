@@ -23,9 +23,15 @@ const Contacts = () => {
             // <img src={ele.url}/>
             <div className='innerUniverse' style={{backgroundImage: `url(${url})`}}>
               
-                <div className='userImage'> 
+                {/* <div className='userImage'> 
                     <img src={friends[index].image}/>
-                </div>
+                </div> */}
+
+<div className="userImage"> 
+  {friends && index < friends.length && friends[index].image && (
+    <img src={friends[index].image} alt="User Image" />
+  )}
+</div>
               
                 <p className='userNameBackground'>
                 {friends[index].name}
