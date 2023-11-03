@@ -9,6 +9,8 @@ const Contacts = () => {
   // console.log('GALACTIC HOME CONTACTS',galacticHome)
 
   let friends = grabCharacters(20)
+  console.log(galacticHome)
+  console.log(friends)
 
   return (
     <div className="universe">
@@ -28,15 +30,15 @@ const Contacts = () => {
                     <img src={friends[index].image}/>
                 </div> */}
 
-              <div className="userImage">
+              {/* <div className="userImage">
                 {friends && index < friends.length && friends[index].image && (
                   <img src={friends[index].image} alt="User Image" />
                 )}
-              </div>
+              </div> */}
 
-              <p className="userNameBackground">{friends[index].name}</p>
+              {/* <p className="userNameBackground">{friends[index].name}</p>
 
-              <p className="userName">{friends[index].name}</p>
+              <p className="userName">{friends[index].name}</p> */}
             </div>
           )
         })
